@@ -2,19 +2,17 @@
 
 Kotlin实现Android的增量更新
 
-##说明 
+## 说明 
 
 本项目包含两个部分：**Android增量更新项目**和**jni的C项目**，对于不想再次进行jni开发的朋友，可以直接下载本demo，将包含的smartupdatelibrary作为lib库引用即可
 
-## 开发步骤：jni、Android项目（若不编写jni部分，可直接跳到8）
+## 开发步骤：jni、Android部分（若不编写jni部分，可直接跳到8）
 
-### 1. jni部分
+### 一. jni部分
 
 #### 1. 环境准备
 
-SDK中安装有NDK，并安装了CMake、LLDB工具，如下图:
-
-![](pictures/1.png)
+SDK中安装有NDK，并安装了CMake、LLDB工具
 
 #### 2. 新建Android Library
 
@@ -165,6 +163,8 @@ SDK中安装有NDK，并安装了CMake、LLDB工具，如下图:
 #### 7. 同步jni所有配置
 
 将demo中tools里面的bzip2包复制到jni目录下，再进行底层方法的完善，最终代码请参考SmartUpdate.c，最后在smartupdatelibrary项目中右击，选择——“Link C++ Project with Gradle”，再同步一下gradle，即可完成jni部分的代码编写
+
+### 二. Android部分
 
 #### 8. 新建Android-Kotlin增量更新项目
 
